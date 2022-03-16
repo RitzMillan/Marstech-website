@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$Primary: #41559B;
+$Accent: #DA2052;
+$Light: #FEFFF8;
+$Dark: #051129;
+
+:root {
+  --color-white: #fff;
+  --time-animation: 1s;
+}
+
+html {
+  scrollbar-width: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #040C1C;
+  overflow: hidden scroll;
+  -ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.layout {
+  width: 100%;
+  height: calc(100vh * 7);
+  position: relative;
+}
+.layout section {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-white);
+  font-size: 80px;
+  font-weight: 600;
+  transform: translateY(100vh);
+  transition: all var(--time-animation) ease-in-out;
+  z-index: 0;
+}
+
+.layout .s1 {
+  background: linear-gradient(129.5deg, #011131 19.38%, #01102E 26.97%);
+  transform: translateY(0);
+  z-index: 8;
+}
+.layout .s2 {
+  background: linear-gradient(129.5deg, #01102E 26.97%, #02102B 36.5%);
+  z-index: 7;
+}
+.layout .s3 {
+  background: linear-gradient(129.5deg, #02102B 36.5%, #030E25 57.3%);
+  z-index: 6;
+}
+.layout .s4 {
+  background: linear-gradient(129.5deg, #030E25 57.3%, #030D22 65.08%);
+  z-index: 5;
+}
+.layout .s5 {
+  background: linear-gradient(129.5deg, #030D22 65.08%, #030D20 72.4%);
+  z-index: 4;
+}
+.layout .s6 {
+  background: linear-gradient(129.5deg, #030D20 72.4%, #040C1E 78.99%);
+  z-index: 3;
+}
+.layout .s7 {
+  background: linear-gradient(129.5deg, #040C1E 78.99%, #040C1C 85.6%);
+  z-index: 2;
+}
+.layout .s8 {
+  background: linear-gradient(129.5deg, #011131 19.38%, #040C1C 85.6%);
+  z-index: 1;
+}
+
+/*** RESPONSIVE ***/
+/* MOBILE */
+// @media screen and (max-width: 576px) {
+//   body::-webkit-scrollbar {
+//     width: 0px;
+//     background: transparent;
+//     -webkit-appearance: none;
+//   }
+//   .layout .section-stick {
+//     right: 20px;
+//     bottom: 20px;
+//     transform: scale(0.7);
+//   }
+//   .layout section {
+//     font-size: 40px;
+//   }
+// }
+
+
+// *****************************************************
+
+.pcolor {
+  color: $Primary;
+}
+
+.acolor {
+  color: $Accent;
+}
+
+.logo {
+  width: 105px;
+  height: 29px;
+}
+
+.top-nav {
+  position: fixed;
+  top: 50px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  transform: translate(calc(50vw - 50%));
+  z-index: 1000;
+  
+  table, td{
+    div{
+      width: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  td {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 14px;
+  }
+
+  button {
+    height: 14px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &:hover{
+      opacity: 70%;
+    }
+  }
+}
+
+.side-nav {
+  position: fixed;
+  right: 50px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  transform: translate(0,calc(50vh - 50%));
+  list-style-type: none;
+  z-index: 1000;
+  
+  li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    button {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+      text-decoration: none;
+      background-color: transparent;
+      border: none;
+
+      &:hover{
+        opacity: 70%;
+      }
+    }
+  }
+}
+
+
+.dotin {
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(57.5% 57.5% at 50% 50%, #DA2052 0%, rgba(218, 32, 82, 0) 100%);
+  animation: dotfadeInAnimation ease 1s;
+}
+
+@keyframes dotfadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+.dotout {
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(57.5% 57.5% at 50% 50%, #DA2052 0%, rgba(218, 32, 82, 0) 100%);
+  animation: dotfadeOutAnimation ease 1s;
+  opacity: 0;
+}
+
+@keyframes dotfadeOutAnimation {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+   }
+}
+
+// sound waves effect
+.loader {
+  position: fixed;
+  bottom: 70px;
+  right: 50px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+
+  &:hover{
+    opacity: 70%;
+  }
+
+  .stroke {
+    display: block;
+    position: relative;
+    background: $Primary;
+    height: 100%;
+    width: 2px;
+    margin: 0 3px;
+    animation: animatewaves 1.2s linear infinite;
+
+    &:nth-child(1) {
+      animation-delay: 0s;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.9s;
+    }
+    &:nth-child(5) {
+      animation-delay: 0.6s;
+    }
+    &:nth-child(6) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(7) {
+      animation-delay: 0s;
+    }
+  }
+}
+
+.nostroke {
+  display: block;
+  position: relative;
+  background: $Primary;
+  height: 6px;
+  width: 2px;
+  margin: 0 3px;
+}
+
+@keyframes animatewaves {
+  50% {
+    height: 20%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.enterButton {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: 1000;
+}
