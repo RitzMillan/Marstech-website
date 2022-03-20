@@ -1,9 +1,11 @@
 import "../App.scss";
 import React, { useEffect, useState, useCallback } from "react";
-import logo from '../Assets/images/logo.png';
-import {Howl, Howler} from 'howler';
+import logo from '../Assets/images/MarstechLogo.svg';
+import { Howl } from 'howler';
 import beep from '../Assets/sounds/beep.mp3'
 import wosh from '../Assets/sounds/wosh2.wav'
+import Home from "./Home/Home";
+import Services from "./Services-page/Services";
 
 function Landing() {
   const TIME_OUT = 1000; // It should be the same transition time of the sections
@@ -12,15 +14,15 @@ function Landing() {
   const [startFlag, setStartFlag] = useState(true);
   const [y, setY] = useState(window.scrollY);
 
-const bep = new Howl({
-    src: [beep],
-    volume: 0.1
-    });
+  const bep = new Howl({
+      src: [beep],
+      volume: 0.1
+      });
 
-const woh = new Howl({
-    src: [wosh],
-    volume: 0.6
-});
+  const woh = new Howl({
+      src: [wosh],
+      volume: 0.6
+  });
 
   const handleNavigation = useCallback(
     (e) => {
@@ -154,9 +156,9 @@ const woh = new Howl({
       </ul>
 
       <div className="layout">
-        <section className="s1">Slide 1</section>
+        <section className="s1"><Home /></section>
 
-        <section className="s2">Slide 2</section>
+        <section className="s2"><Services /></section>
 
         <section className="s3">Slide 3</section>
 

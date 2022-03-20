@@ -1,0 +1,150 @@
+$Primary: #41559b;
+$Accent: #da2052;
+$Light: #fefff8;
+$Dark: #051129;
+
+
+.home-grid-container {
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 4fr 1fr 1fr 1fr 1fr;
+  //grid-auto-flow: column;
+  margin-left: 20px;
+  margin-right: 20px;
+  z-index: 900;
+}
+
+.rotating-mars-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  grid-column-start: 5;
+
+  .rotating-mars {
+    height: 300px;
+    width: 300px;
+    position: fixed;
+    z-index: 302;
+  }
+
+  .hero1{
+    position: fixed;
+    z-index: 303;
+    padding-right: 50px;
+  }
+  
+  .hero2 {
+    position: fixed;
+    z-index: 301;
+    padding-left: 50px;
+  }
+
+  .ring0{
+    position: fixed;
+    z-index: 298;
+    height: 70%;
+    width: 70%;
+    animation: rotation 16s infinite linear;
+  }
+
+  .ring1{
+    position: fixed;
+    z-index: 297;
+    height: 70%;
+    width: 70%;
+    animation: rotation 10s infinite linear;
+  }
+
+  .ring2{
+    position: fixed;
+    z-index: 299;
+    height: 60%;
+    width: 70%;
+    animation: rotation 8s infinite linear;
+  }
+
+  .ring3{
+    position: fixed;
+    z-index: 300;
+    height: 50%;
+    width: 70%;
+    animation: rotation 5s infinite linear;
+  }
+
+  .inst-text {
+    display: flex;
+    margin-top: 130%;
+
+    p {
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 20px;
+    }
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.social-nav {
+  list-style-type: none;
+  grid-column-start: 2;
+  padding: 0%;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  li {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    height: 20px;
+    width: 20px;
+
+    &:hover{
+      opacity: 70%;
+    }
+  }
+}
+
+.scroll{
+  width: 18px;
+  height: 32px;
+
+  .mouse{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 2px solid $Primary;
+    border-radius: 46px;
+
+    .wheel{
+      width: 3px;
+      height: 8px;
+      background: $Primary;
+      display: block;
+      border-radius: 50%;
+      margin-left: 8px;
+      margin-top: 4px;
+      animation-name: scroll-wheel;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+@keyframes scroll-wheel{
+  from{
+      transform: translate(0, 0);
+      opacity: 1;
+  }
+  to{
+      transform: translate(0, 10px);
+      opacity: 0;
+  }
+}

@@ -1,5 +1,5 @@
 import "./App.scss";
-import React, { useEffect, useState, useCallback, useRef } from "react";
+import React from "react";
 import logo from './Assets/images/logo.png';
 import {Howl, Howler} from 'howler';
 import ambient from './Assets/sounds/WinterRestlessness.mp3'
