@@ -10,6 +10,15 @@ $Dark: #051129;
   --time-animation: 1s;
 }
 
+h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 59.3px;
+  line-height: 89px;
+  margin: 0;
+}
+
 h3 {
   font-family: "Poppins";
   font-style: normal;
@@ -35,6 +44,30 @@ p {
   font-size: 14px;
   line-height: 21px;
   margin: 0;
+}
+
+.mbutton {
+  width: 200px;
+  height: 50px;
+  background: linear-gradient(103.7deg, rgba(255, 255, 255, 0.3) 22.79%, rgba(255, 255, 255, 0) 116.89%);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.sbutton {
+  width: 200px;
+  height: 50px;
+  border: 1px solid #4D5769;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+  border-radius: 10px;
+  color: #4D5769;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 html {
@@ -329,4 +362,62 @@ body::-webkit-scrollbar {
   top: 50px;
   left: 50px;
   z-index: 1000;
+}
+
+.moving-text {
+  height: 100vh;
+  grid-column-start: 2;
+  transition: all 1s ease;
+  transform: rotate(-180deg);
+  width: 75px;
+  overflow: hidden;
+
+  .marquee1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-size: 95.95px;
+    line-height: 75px;
+    -webkit-text-stroke: 1px $Primary;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    height: 100vh;
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+    animation: scrollText 10s infinite linear;
+  }
+
+  .marquee2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-size: 95.95px;
+    line-height: 75px;
+    -webkit-text-stroke: 1px $Primary;
+    -webkit-text-fill-color: $Primary;
+    height: 100vh;
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    animation-delay: 5s !important;
+    animation: scrollText2 10s infinite linear;
+  }
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+  }
+}
+
+@keyframes scrollText2 {
+  0% {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-200%);
+    -webkit-transform: translateY(-200%);
+  }
 }

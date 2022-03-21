@@ -6,6 +6,7 @@ import beep from '../Assets/sounds/beep.mp3'
 import wosh from '../Assets/sounds/wosh2.wav'
 import Home from "./Home/Home";
 import Services from "./Services-page/Services";
+import Products from "./Products-page/Products";
 
 function Landing() {
   const TIME_OUT = 1000; // It should be the same transition time of the sections
@@ -160,7 +161,7 @@ function Landing() {
 
         <section className="s2"><Services /></section>
 
-        <section className="s3">Slide 3</section>
+        <section className="s3"><Products /></section>
 
         <section className="s4">Slide 4</section>
 

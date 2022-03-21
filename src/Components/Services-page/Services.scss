@@ -12,64 +12,6 @@ $Dark: #051129;
   margin-right: 20px;
 }
 
-.moving-text {
-  height: 100vh;
-  grid-column-start: 2;
-  transition: all 1s ease;
-  transform: rotate(-180deg);
-  width: 75px;
-  overflow: hidden;
-
-  .marquee1 {
-    font-family: "Poppins";
-    font-style: normal;
-    font-size: 95.95px;
-    line-height: 75px;
-    -webkit-text-stroke: 1px $Primary;
-    -webkit-text-fill-color: rgba(0, 0, 0, 0);
-    height: 100vh;
-    writing-mode: vertical-lr;
-    -webkit-writing-mode: vertical-lr;
-    animation: scrollText 10s infinite linear;
-  }
-
-  .marquee2 {
-    font-family: "Poppins";
-    font-style: normal;
-    font-size: 95.95px;
-    line-height: 75px;
-    -webkit-text-stroke: 1px $Primary;
-    -webkit-text-fill-color: $Primary;
-    height: 100vh;
-    writing-mode: vertical-rl;
-    -webkit-writing-mode: vertical-rl;
-    animation-delay: 5s !important;
-    animation: scrollText2 10s infinite linear;
-  }
-}
-
-@keyframes scrollText {
-  0% {
-    transform: translateY(100%);
-    -webkit-transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(-100%);
-    -webkit-transform: translateY(-100%);
-  }
-}
-
-@keyframes scrollText2 {
-  0% {
-    transform: translateY(0%);
-    -webkit-transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-200%);
-    -webkit-transform: translateY(-200%);
-  }
-}
-
 .card-container1 {
   grid-column-start: 4;
   height: 100vh;
@@ -157,8 +99,8 @@ $Dark: #051129;
     h3 {
       font-weight: 700;
       line-height: 40px;
-      color: #040c1c;
-      -webkit-text-stroke: 2px #040c1c;
+      color: #040C1C;
+      -webkit-text-stroke: 2px #040C1C;
     }
   }
 
