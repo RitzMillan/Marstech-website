@@ -10,6 +10,15 @@ $Dark: #051129;
   --time-animation: 1s;
 }
 
+h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 95.95px;
+  line-height: 144px;
+  margin: 0;
+}
+
 h2 {
   font-family: "Poppins";
   font-style: normal;
@@ -49,7 +58,11 @@ p {
 .mbutton {
   width: 200px;
   height: 50px;
-  background: linear-gradient(103.7deg, rgba(255, 255, 255, 0.3) 22.79%, rgba(255, 255, 255, 0) 116.89%);
+  background: linear-gradient(
+    103.7deg,
+    rgba(255, 255, 255, 0.3) 22.79%,
+    rgba(255, 255, 255, 0) 116.89%
+  );
   backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 0;
@@ -60,14 +73,33 @@ p {
 .sbutton {
   width: 200px;
   height: 50px;
-  border: 1px solid #4D5769;
+  border: 1px solid #4d5769;
   box-sizing: border-box;
   backdrop-filter: blur(10px);
   background-color: transparent;
   border-radius: 10px;
-  color: #4D5769;
+  color: #4d5769;
   font-weight: bold;
   font-size: 14px;
+}
+
+.abutton {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #4d5769;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+  border-radius: 21px;
+
+  &:hover {
+    border: 0;
+    background: linear-gradient(103.7deg,rgba(255, 255, 255, 0.3) 22.79%,rgba(255, 255, 255, 0) 116.89%);
+
+    svg path {
+      fill: $Dark
+    }
+  }
 }
 
 html {

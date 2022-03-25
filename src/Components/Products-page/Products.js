@@ -6,22 +6,19 @@ import reseller from "../../Assets/images/reseller.png";
 import bizz from "../../Assets/images/bizz.png";
 
 function Products() {
-
   const handlemovement = () => {
-    document.querySelector(`.left-inner-container`).style.transform = "translateY(-100vh)";
-    document.querySelector(`.right-inner-container`).style.transform = "translateY(-100vh)";
-  }
+    document.querySelector(`.left-inner-container`).style.transform =
+      "translateY(-100vh)";
+    document.querySelector(`.right-inner-container`).style.transform =
+      "translateY(-100vh)";
+  };
 
   return (
     <div>
       <div className="products-grid-container">
         <div className="moving-text">
-          <div className="marquee1" direction="up" loop="infinite">
-            OUR PRODUCT
-          </div>
-          <div className="marquee2" direction="up" loop="infinite">
-            OUR PRODUCT
-          </div>
+          <div className="marquee1">OUR PRODUCT</div>
+          <div className="marquee2">OUR PRODUCT</div>
         </div>
 
         <div className="left-outer-container">
@@ -66,10 +63,12 @@ function Products() {
                   <h3>Bizz B2B</h3>
                   <p className="sd">A complete B2B solution</p>
                   <p className="ld">
-                    Whether you are a Manufacturer or Distributor, we’ve got you back in everything you need to manage you supply chain.
+                    Whether you are a Manufacturer or Distributor, we’ve got you
+                    back in everything you need to manage you supply chain.
                     <br />
                     <br />
-                    Simple to understand and Powerful to use webapp that is equally user frendly in mobile as is in desktop. 
+                    Simple to understand and Powerful to use webapp that is
+                    equally user frendly in mobile as is in desktop.
                   </p>
                   <button className="mbutton">KNOW MORE</button>
                 </div>
@@ -78,7 +77,6 @@ function Products() {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
         <div className="right-outer-container">
@@ -98,12 +96,17 @@ function Products() {
               <div className="right">
                 <div className="content">
                   <h3>Reseller Platform</h3>
-                  <p className="sd">Start Your Business from Home with Zero Investment</p>
+                  <p className="sd">
+                    Start Your Business from Home with Zero Investment
+                  </p>
                   <p className="ld">
-                    An app to revolutionize the Retail and Whole sale market by transforming the way we do Business. Loaded with features to streamline your inventory and sales.
+                    An app to revolutionize the Retail and Whole sale market by
+                    transforming the way we do Business. Loaded with features to
+                    streamline your inventory and sales.
                     <br />
                     <br />
-                    Clean User interface that has full control of the database and all service features.
+                    Clean User interface that has full control of the database
+                    and all service features.
                   </p>
                   <button className="mbutton">KNOW MORE</button>
                 </div>
