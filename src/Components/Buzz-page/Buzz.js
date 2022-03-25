@@ -1,7 +1,6 @@
 import React from "react";
 import "../../App.scss";
 import "./Buzz.scss";
-import rarrow from "../../Assets/icons/r-arrow.svg";
 import BlogCard from "./BlogCard";
 
 function Buzz() {

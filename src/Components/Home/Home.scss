@@ -42,32 +42,32 @@ $Dark: #051129;
   .ring0{
     position: fixed;
     z-index: 298;
-    height: 70%;
-    width: 70%;
+    height: 70vh;
+    width: 70vh;
     animation: rotation 16s infinite linear;
   }
 
   .ring1{
     position: fixed;
     z-index: 297;
-    height: 70%;
-    width: 70%;
+    height: 70vh;
+    width: 70vh;
     animation: rotation 10s infinite linear;
   }
 
   .ring2{
     position: fixed;
     z-index: 299;
-    height: 60%;
-    width: 70%;
+    height: 60vh;
+    width: 70vh;
     animation: rotation 8s infinite linear;
   }
 
   .ring3{
     position: fixed;
     z-index: 300;
-    height: 50%;
-    width: 70%;
+    height: 50vh;
+    width: 70vh;
     animation: rotation 5s infinite linear;
   }
 
