@@ -9,6 +9,7 @@ import Services from "./Services-page/Services";
 import Products from "./Products-page/Products";
 import Buzz from "./Buzz-page/Buzz";
 import Ovations from "./Ovations-page/Ovations";
+import About from "./About-page/About";
 
 function Landing() {
   const TIME_OUT = 1000; // It should be the same transition time of the sections
@@ -169,7 +170,7 @@ function Landing() {
 
         <section className="s5"><Ovations /></section>
 
-        <section className="s6">Slide 6</section>
+        <section className="s6"><About /></section>
 
         <section className="s7">Slide 7</section>
       </div>
