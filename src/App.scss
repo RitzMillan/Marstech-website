@@ -5,6 +5,25 @@ $Accent: #da2052;
 $Light: #fefff8;
 $Dark: #051129;
 
+$t1: #81e8f6;
+$t1: #76deef;
+$t1: #055194;
+$t1: #062745;
+
+*:focus {
+  outline: none;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: $Dark;
+  background: $Accent;
+}
+
+::selection {
+  color: $Dark;
+  background: $Accent;
+}
+
 :root {
   --color-white: #fff;
   --time-animation: 1s;
@@ -55,20 +74,107 @@ p {
   margin: 0;
 }
 
+// .mbutton {
+//   width: 220px;
+//   height: 50px;
+//   border: 1px solid $Light;
+//   outline: none;
+//   color: #fff;
+//   background: #4d5769;
+//   cursor: pointer;
+//   position: relative;
+//   z-index: 0;
+//   border-radius: 10px;
+
+//   &::before {
+//     content: '';
+//     background: linear-gradient(45deg, #4D5769, #8994A8, #BDC4CF, #DCDFE4, #BDC4CF, #8994A8, #4D5769);
+//     position: absolute;
+//     top: -2px;
+//     left:-2px;
+//     background-size: 400%;
+//     z-index: -1;
+//     filter: blur(5px);
+//     width: calc(100% + 4px);
+//     height: calc(100% + 4px);
+//     animation: glowing 20s linear infinite;
+//     opacity: 0;
+//     transition: opacity 1s ease-in-out;
+//     border-radius: 10px;
+//   }
+
+//   &:active {
+//     color: $Light
+//   }
+
+//   &:active::after {
+//     background: #051638;
+//   }
+
+//   &:hover::before {
+//     opacity: 1;
+//   }
+
+//   &::after {
+//     z-index: -1;
+//     content: '';
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     background: $Dark;
+//     // border: 1px solid $Light;
+//     left: 0;
+//     top: 0;
+//     border-radius: 10px;
+//   }
+// }
+
+// @keyframes glowing {
+// 0% { background-position: 0 0; }
+// 50% { background-position: 400% 0; }
+// 100% { background-position: 0 0; }
+// }
+
 .mbutton {
-  width: 200px;
   height: 50px;
-  background: linear-gradient(
-    103.7deg,
-    rgba(255, 255, 255, 0.3) 22.79%,
-    rgba(255, 255, 255, 0) 116.89%
-  );
+  width: 200px;
+  font-weight: 600;
+  font-size: 16px;
+  
+  background: $Primary;
+  color: $Dark;
   backdrop-filter: blur(10px);
+  border: 1px solid $Primary;
   border-radius: 10px;
-  border: 0;
-  font-weight: bold;
-  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    background: transparent;
+    color: $Primary;
+  }
+
+  &:focus {
+  background: linear-gradient(to right, $Primary 0,   #fefff8 10%, $Primary 20%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear;
+  }
+
 }
+
+@keyframes shine{
+  0%{
+    background-position: 0
+  }
+  60%{
+    background-position: 180px
+  }
+  100%{
+    background-position: 180px
+  }
+}
+
 
 .sbutton {
   width: 200px;
@@ -86,18 +192,19 @@ p {
 .abutton {
   width: 50px;
   height: 50px;
-  border: 1px solid #4d5769;
+  border: none;
   box-sizing: border-box;
   backdrop-filter: blur(10px);
-  background-color: transparent;
+  background-color: $Primary;
   border-radius: 21px;
+  cursor: pointer;
 
   &:hover {
-    border: 0;
-    background: linear-gradient(103.7deg,rgba(255, 255, 255, 0.3) 22.79%,rgba(255, 255, 255, 0) 116.89%);
+    border: 1px solid $Primary;
+    background: transparent;
 
     svg path {
-      fill: $Dark
+      fill: $Primary;
     }
   }
 }

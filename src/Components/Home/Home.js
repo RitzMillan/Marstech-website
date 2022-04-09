@@ -1,7 +1,6 @@
 import React from "react";
 import "../../App.scss";
 import "./Home.scss";
-import mars from "../../Assets/images/marsrotation.gif";
 import hero1 from "../../Assets/images/hero1.svg";
 import hero2 from "../../Assets/images/hero2.svg";
 import ln from "../../Assets/icons/linkedin.svg";
@@ -12,7 +11,6 @@ import ring0 from "../../Assets/icons/ring0.svg";
 import ring1 from "../../Assets/icons/ring1.svg";
 import ring2 from "../../Assets/icons/ring2.svg";
 import ring3 from "../../Assets/icons/ring3.svg";
-import mar from "../../Assets/images/mar.png"
 import beep from '../../Assets/sounds/beep.mp3'
 import { Howl } from 'howler';
 
@@ -47,7 +45,8 @@ function Home() {
 
         <div className="rotating-mars-container">
           <img src={hero1} className="hero1" alt="marstech"></img>
-          <img src={mar} className="rotating-mars" alt="rotating mars"></img>
+          {/* <img src={mars} className="rotating-mars" alt="rotating mars"></img> */}
+          <div id="mars"></div>
           <img src={hero2} className="hero2" alt="marstech"></img>
           <img src={ring0} className="ring0" alt="mars rings"></img>
           <img src={ring1} className="ring1" alt="mars rings"></img>
