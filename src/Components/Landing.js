@@ -103,61 +103,25 @@ function Landing() {
 
   return (
     <div>
-      <table className="top-nav">
-        <tbody>
-          <tr>
-            <td>
-              <div className={qty===2 ? "dotin" : "dotout"}></div>
-            </td>
-            <td>
-              <div className={qty===3 ? "dotin" : "dotout"}></div>
-            </td>
-            <td>
-              <div className={qty===4 ? "dotin" : "dotout"}></div>
-            </td>
-            <td rowSpan={2}>
-              <button onClick={() => handleNav(1)}><img className="logo" src={logo} alt="Marstech logo"></img></button>
-            </td>
-            <td>
-              <div className={qty===5 ? "dotin" : "dotout"}></div>
-            </td>
-            <td>
-              <div className={qty===6 ? "dotin" : "dotout"}></div>
-            </td>
-            <td>
-              <div className={qty===7 ? "dotin" : "dotout"}></div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button className={qty===2 ? "acolor" : "pcolor"} onClick={() => handleNav(2)} onMouseOver={handlebeep} >S E R V I C E S</button>
-            </td>
-            <td>
-              <button className={qty===3 ? "acolor" : "pcolor"} onClick={() => handleNav(3)} onMouseOver={handlebeep}>P R O D U C T S</button>
-            </td>
-            <td>
-              <button className={qty===4 ? "acolor" : "pcolor"} onClick={() => handleNav(4)} onMouseOver={handlebeep}>B U Z Z</button>
-            </td>
-            <td>
-              <button className={qty===5 ? "acolor" : "pcolor"} onClick={() => handleNav(5)} onMouseOver={handlebeep}>O V A T I O N S</button>
-            </td>
-            <td>
-              <button className={qty===6 ? "acolor" : "pcolor"} onClick={() => handleNav(6)} onMouseOver={handlebeep}>A B O U T&nbsp;&nbsp;&nbsp;U S</button>
-            </td>
-            <td>
-              <button className={qty===7 ? "acolor" : "pcolor"} onClick={() => handleNav(7)} onMouseOver={handlebeep}>C O N T A C T</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <ul className="side-nav">
-        <li><button className={qty===1 ? "acolor" : "pcolor"} onClick={() => handleNav(1)} onMouseOver={handlebeep}>01</button></li>
-        <li><button className={qty===2 ? "acolor" : "pcolor"} onClick={() => handleNav(2)} onMouseOver={handlebeep}>02</button></li>
-        <li><button className={qty===3 ? "acolor" : "pcolor"} onClick={() => handleNav(3)} onMouseOver={handlebeep}>03</button></li>
-        <li><button className={qty===4 ? "acolor" : "pcolor"} onClick={() => handleNav(4)} onMouseOver={handlebeep}>04</button></li>
-        <li><button className={qty===5 ? "acolor" : "pcolor"} onClick={() => handleNav(5)} onMouseOver={handlebeep}>05</button></li>
-        <li><button className={qty===6 ? "acolor" : "pcolor"} onClick={() => handleNav(6)} onMouseOver={handlebeep}>06</button></li>
-        <li><button className={qty===7 ? "acolor" : "pcolor"} onClick={() => handleNav(7)} onMouseOver={handlebeep}>07</button></li>
+      <ul className="top-nav">
+        <li className={qty===2 ? "current" : ""}><button onClick={() => handleNav(2)} onMouseOver={handlebeep} >S E R V I C E S</button></li>
+        <li className={qty===3 ? "current" : ""}><button onClick={() => handleNav(3)} onMouseOver={handlebeep}>P R O D U C T S</button></li>
+        <li className={qty===4 ? "current" : ""}><button onClick={() => handleNav(4)} onMouseOver={handlebeep}>B U Z Z</button></li>
+        <li><div onClick={() => handleNav(1)}><img className="logo" src={logo} alt="Marstech logo"></img></div></li>
+        <li className={qty===5 ? "current" : ""}><button onClick={() => handleNav(5)} onMouseOver={handlebeep}>O V A T I O N S</button></li>
+        <li className={qty===6 ? "current" : ""}><button onClick={() => handleNav(6)} onMouseOver={handlebeep}>A B O U T&nbsp;&nbsp;&nbsp;U S</button></li>
+        <li className={qty===7 ? "current" : ""}><button onClick={() => handleNav(7)} onMouseOver={handlebeep}>C O N T A C T</button></li>
+      </ul>
+
+
+      <ul className="page-number">
+        <li className={qty===1 ? "acolor" : "pcolor"}>01</li>
+        <li className={qty===2 ? "acolor" : "pcolor"}>02</li>
+        <li className={qty===3 ? "acolor" : "pcolor"}>03</li>
+        <li className={qty===4 ? "acolor" : "pcolor"}>04</li>
+        <li className={qty===5 ? "acolor" : "pcolor"}>05</li>
+        <li className={qty===6 ? "acolor" : "pcolor"}>06</li>
+        <li className={qty===7 ? "acolor" : "pcolor"}>07</li>
       </ul>
 
       <div className="layout">

@@ -312,41 +312,42 @@ body::-webkit-scrollbar {
 .logo {
   width: 151px;
   height: 34px;
+  cursor: pointer;
 }
 
 .top-nav {
+  display: flex;
+  align-items: center;
   position: fixed;
-  top: 50px;
+  top: 30px;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
   transform: translate(calc(50vw - 50%));
   z-index: 1000;
+  text-align: center;
 
-  table,
-  td {
-    div {
-      width: 10px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
+  & * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
   }
-  td {
-    // border: 1px solid wheat;
-    padding-left: 35px;
-    padding-right: 35px;
-    padding-top: 0;
-    padding-bottom: 0;
-    line-height: 14px;
+
+  li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0.4em 1.2em;
+    padding: 0;
   }
 
   button {
+    position: relative;
     height: 14px;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
+    color: $Primary;
     line-height: 14px;
     text-decoration: none;
     background-color: transparent;
@@ -354,13 +355,47 @@ body::-webkit-scrollbar {
     padding-top: 0;
     padding-bottom: 0;
 
+    &::before {
+      position: absolute;
+      content: '';
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+      opacity: 0;
+      left: 15%;
+      right: 15%;
+      top: 0;
+      bottom: 0;
+      border-left: 3px solid $Accent;
+      border-right: 3px solid $Accent;
+    }
+
     &:hover {
-      opacity: 70%;
+      color: $Light;
+
+      &::before {
+        opacity: 1;
+        left: -4%;
+        right: -4%;
+      }
     }
   }
+
+  .current {
+    button {
+      color: $Light;
+
+      &::before {
+        opacity: 1;
+        left: -4%;
+        right: -4%;
+      }
+    }
+  }
+
 }
 
-.side-nav {
+
+.page-number {
   position: fixed;
   right: 9.5%;
   margin-top: 0;
@@ -373,61 +408,13 @@ body::-webkit-scrollbar {
   li {
     padding-top: 15px;
     padding-bottom: 15px;
-
-    button {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 21px;
-      text-decoration: none;
-      background-color: transparent;
-      border: none;
-
-      &:hover {
-        opacity: 70%;
-      }
-    }
-  }
-}
-
-.dotin {
-  width: 10px;
-  height: 10px;
-  background: radial-gradient(
-    57.5% 57.5% at 50% 50%,
-    #da2052 0%,
-    rgba(218, 32, 82, 0) 100%
-  );
-  animation: dotfadeInAnimation ease 1s;
-}
-
-@keyframes dotfadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.dotout {
-  width: 10px;
-  height: 10px;
-  background: radial-gradient(
-    57.5% 57.5% at 50% 50%,
-    #da2052 0%,
-    rgba(218, 32, 82, 0) 100%
-  );
-  animation: dotfadeOutAnimation ease 1s;
-  opacity: 0;
-}
-
-@keyframes dotfadeOutAnimation {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
   }
 }
 

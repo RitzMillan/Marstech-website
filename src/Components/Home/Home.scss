@@ -97,7 +97,7 @@ $Dark: #051129;
 
   .inst-text {
     display: flex;
-    margin-top: 130%;
+    margin-top: 135%;
 
     p {
       margin-top: auto;
@@ -130,9 +130,18 @@ $Dark: #051129;
     width: 20px;
 
     &:hover{
-      opacity: 70%;
+
+      svg path {
+        stroke: $Light;
+      }
     }
   }
+}
+
+.social-sound {
+  position: fixed;
+  height: 20px;
+  width: 20px;
 }
 
 .scroll{
@@ -151,8 +160,9 @@ $Dark: #051129;
       height: 8px;
       background: $Primary;
       display: block;
-      border-radius: 50%;
-      margin-left: 8px;
+      border-radius: 30%;
+      margin-left: auto;
+      margin-right: auto;
       margin-top: 4px;
       animation-name: scroll-wheel;
       animation-duration: 1.5s;
