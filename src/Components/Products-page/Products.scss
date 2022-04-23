@@ -113,6 +113,13 @@ $Dark: #051129;
   width: auto;
 
   img {
-    width: 90%;
+    width: 80%;
+    animation: floating 3s infinite ease-in-out;
   }
+}
+
+@keyframes floating {
+  from { transform: translate(0,  0px); }
+  65%  { transform: translate(0, 18px); }
+  to   { transform: translate(0, -0px); }    
 }

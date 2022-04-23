@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../App.scss";
 import "./Products.scss";
-import blockdocs from "../../Assets/images/blockdocs.png";
+import eth from "../../Assets/images/ethereum.png";
 import reseller from "../../Assets/images/reseller.png";
 import bizz from "../../Assets/images/bizz.png";
 
-function Products() {
-  const handlemovement = () => {
-    document.querySelector(`.left-inner-container`).style.transform =
-      "translateY(-100vh)";
-    document.querySelector(`.right-inner-container`).style.transform =
-      "translateY(-100vh)";
-  };
+function Products(props) {
+
+  useEffect(() => {
+    if(props.qty === 3){
+      document.querySelector(`.left-inner-container`).style.transform = `translateY(-${0}00vh)`;
+      document.querySelector(`.right-inner-container`).style.transform = `translateY(-${2}00vh)`;
+    }
+    else if(props.qty === 4){
+      document.querySelector(`.left-inner-container`).style.transform = `translateY(-${1}00vh)`;
+      document.querySelector(`.right-inner-container`).style.transform = `translateY(-${1}00vh)`;
+    }
+    else if(props.qty === 5){
+      document.querySelector(`.left-inner-container`).style.transform = `translateY(-${2}00vh)`;
+      document.querySelector(`.right-inner-container`).style.transform = `translateY(-${0}00vh)`;
+    }
+  },[props.qty])
 
   return (
     <div>
@@ -119,7 +128,7 @@ function Products() {
             <div id="r1" className="right-container">
               <div className="right">
                 <div className="img-container">
-                  <img src={blockdocs} alt="blockchain document"></img>
+                  <img src= {eth} alt="blockchain document"></img>
                 </div>
                 <div className="right-accent">
                   <h2>Technology</h2>
@@ -130,7 +139,8 @@ function Products() {
         </div>
 
         <div>
-          <button onClick={handlemovement}>move</button>
+          {/* <button onClick={incQty}>scroll down</button>
+          <button onClick={decQty}>scroll up</button> */}
         </div>
       </div>
     </div>

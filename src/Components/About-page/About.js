@@ -43,12 +43,12 @@ function About() {
           <div className="message">
             <h4>
               As an independent organization, we only take on projects that we
-              truly <h2>believe</h2> in.
+              truly <p className="bigtext">believe</p> in.
             </h4>
             <br />
             <br />
             <h4>
-              It is our strong belief that the best <h2>results</h2> can only be
+              It is our strong belief that the best <p className="bigtext">results</p> can only be
               achieved through working closely with the client.
             </h4>
             <br />
@@ -56,7 +56,7 @@ function About() {
             <br />
             <h4>
               We value openness in communication and willingness to accept{" "}
-              <h2>new ideas</h2>.
+              <p className="bigtext">new ideas</p>.
             </h4>
           </div>
         </div>

@@ -57,7 +57,12 @@ $Dark: #051129;
     .message {
         width: 650px;
 
-        h2 {
+        .bigtext {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 59.3px;
+            margin: 0;
             display: inline;
             line-height: 40px;
         }

@@ -5,11 +5,6 @@ $Accent: #da2052;
 $Light: #fefff8;
 $Dark: #051129;
 
-$t1: #81e8f6;
-$t1: #76deef;
-$t1: #055194;
-$t1: #062745;
-
 *:focus {
   outline: none;
 }
@@ -153,27 +148,27 @@ p {
     color: $Primary;
   }
 
-  &:focus {
-  background: linear-gradient(to right, $Primary 0,   #fefff8 10%, $Primary 20%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 3s linear;
-  }
+  // &:focus {
+  // background: linear-gradient(to right, $Primary 0,   #fefff8 10%, $Primary 20%);
+  // -webkit-background-clip: text;
+  // background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  // animation: shine 3s linear;
+  // }
 
 }
 
-@keyframes shine{
-  0%{
-    background-position: 0
-  }
-  60%{
-    background-position: 180px
-  }
-  100%{
-    background-position: 180px
-  }
-}
+// @keyframes shine{
+//   0%{
+//     background-position: 0
+//   }
+//   60%{
+//     background-position: 180px
+//   }
+//   100%{
+//     background-position: 180px
+//   }
+// }
 
 
 .sbutton {
