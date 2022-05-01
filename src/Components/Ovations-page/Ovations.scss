@@ -31,13 +31,11 @@ $Dark: #051129;
 
 .gepl-pos {
     position: absolute;
-    top: 45%;
     z-index: 499;
 }
 
 .alf-pos {
     position: absolute;
-    top: 20%;
     right: 0%;
     z-index: 498;
 }
@@ -90,6 +88,21 @@ $Dark: #051129;
 
         h3 {
             text-align: center;
+
+            img {
+                float: right;
+                padding-top: 10px;
+            }
+
+            .viz {
+                transition: 500ms ease-in;
+                opacity: 1;
+            }
+        
+            .inviz {
+                transition: 500ms ease-out;
+                opacity: 0;
+            }
         }
     
 

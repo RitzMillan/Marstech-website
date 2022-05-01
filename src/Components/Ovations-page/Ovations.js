@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../App.scss";
 import "./Ovations.scss";
+import ext from "../../Assets/icons/external.svg"
 import cre from "../../Assets/images/cre.png";
 import gepl from "../../Assets/images/gepl.png";
 import alf from "../../Assets/images/alf.png";
@@ -44,12 +45,13 @@ function Ovations() {
             onMouseLeave={() => setGeplVisible(false)}
           >
             <h3>
+              GEPL - Hong Kong
               <a
                 href="https://marstechweb.github.io/geplab-website/index.html"
                 target="_blank"
                 rel="noreferrer"
               >
-                GEPL - Hong Kong
+                <img src={ext} className={geplVisible ? "viz" : "inviz"} alt="external link"></img>
               </a>
             </h3>
             <p>
@@ -71,12 +73,13 @@ function Ovations() {
             onMouseLeave={() => setCreVisible(false)}
           >
             <h3>
+              CRE Lab - IIT Delhi
               <a
                 href="https://web.iitd.ac.in/~kkpant/"
                 target="_blank"
                 rel="noreferrer"
               >
-                CRE Lab - IIT Delhi
+                <img src={ext} className={creVisible ? "viz" : "inviz"} alt="external link"></img>
               </a>
             </h3>
             <p>
@@ -99,12 +102,13 @@ function Ovations() {
             onMouseLeave={() => setSusVisible(false)}
           >
             <h3>
+              Sustainida
               <a
                 href="https://www.sustainida.com/"
                 target="_blank"
                 rel="noreferrer"
               >
-                Sustainida
+                <img src={ext} className={susVisible ? "viz" : "inviz"} alt="external link"></img>
               </a>
             </h3>
             <p>
@@ -125,12 +129,13 @@ function Ovations() {
             onMouseLeave={() => setAlfVisible(false)}
           >
             <h3>
+              Any Laptop Fix
               <a
                 href="https://www.anylaptopfix.com/"
                 target="_blank"
                 rel="noreferrer"
               >
-                Any Laptop Fix
+                <img src={ext} className={alfVisible ? "viz" : "inviz"} alt="external link"></img>
               </a>
             </h3>
             <p>
@@ -148,12 +153,13 @@ function Ovations() {
         <div className="strips">
           <div className="piece">
             <h3>
+              NPR
               <a
                 href="#/"
                 target="_blank"
                 rel="noreferrer"
               >
-                NPR
+                <img src={ext} className={"inviz"} alt="external link"></img>
               </a>
             </h3>
             <p>
@@ -170,12 +176,13 @@ function Ovations() {
         <div className="strips">
           <div className="piece">
             <h3>
+              VVB Sports
               <a
                 href="#/"
                 target="_blank"
                 rel="noreferrer"
               >
-                VVB Sports
+                <img src={ext} className={"inviz"} alt="external link"></img>
               </a>
             </h3>
             <p>
