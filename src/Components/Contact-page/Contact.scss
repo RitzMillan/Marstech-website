@@ -11,6 +11,97 @@ $Dark: #051129;
   margin-right: 20px;
 
   .contact-left-container {
+    grid-column-start: 1;
+    grid-column-end: span 6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .artwork {
+      height: 600px;
+      width: 600px;
+
+      .gradient{
+        width: 294px;
+        height: 294px;
+        // background: linear-gradient(40.3deg, #41549B -9.9%, #DA2052 77.6%);
+        background: linear-gradient(90deg, $Accent, $Primary, $Accent);
+        position: absolute;
+        z-index: 1;
+        top: 250px;
+        left: 320px;
+        background-size: 400%;
+        transform: rotate(121deg);
+        animation: animate 18s linear infinite;
+      }
+
+      @keyframes animate {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: 400%;
+        }
+      }
+
+      .gradient-shadow {
+        width: 294px;
+        height: 294px;
+        // background: linear-gradient(36.06deg, rgba(65, 84, 155, 0) 57.29%, #040C1E 196.28%);
+        background: linear-gradient(35.67deg, rgba(65, 84, 155, 0) 42.18%, #040C1E 196.4%);
+        position: absolute;
+        z-index: 2;
+        top: 275px;
+        left: 275px;
+      }
+
+      .stencil {
+        width: 700px;
+        height: 700px;
+        position: absolute;
+        z-index: 3;
+      }
+
+      .cover {
+        position: absolute;
+        z-index: 4;
+        top: 385px;
+        left: 285px;
+      }
+
+      .astro {
+        width: 322px;
+        height: 369px;
+        position: absolute;
+        z-index: 5;
+        top: 174px;
+        left: 314px;
+      }
+
+      .text-box {
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        z-index: 6;
+
+        p {
+          margin: 0;
+          font-size: 8.65px;
+          color: $Light;
+        }
+
+        .top-txt {
+          margin-top: 110px;
+          text-align: center;
+        }
+
+        .bottom-txt {
+          text-align: center;
+          margin-top: 370px;
+        }
+      }
+    }
   }
 
   .contact-right-container {
