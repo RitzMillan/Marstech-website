@@ -19,18 +19,17 @@ $Dark: #051129;
     align-items: center;
 
     .artwork {
-      height: 600px;
-      width: 600px;
+      height: 748px;
+      width: 748px;
 
       .gradient{
-        width: 294px;
-        height: 294px;
-        // background: linear-gradient(40.3deg, #41549B -9.9%, #DA2052 77.6%);
+        width: 340px;
+        height: 460px;
         background: linear-gradient(90deg, #FF0045, $Primary, #FF0045);
         position: absolute;
         z-index: 1;
-        top: 250px;
-        left: 320px;
+        top: 180px;
+        left: 250px;
         background-size: 400%;
         transform: rotate(121deg);
         animation: animate 18s linear infinite;
@@ -48,17 +47,16 @@ $Dark: #051129;
       .gradient-shadow {
         width: 294px;
         height: 294px;
-        // background: linear-gradient(36.06deg, rgba(65, 84, 155, 0) 57.29%, #040C1E 196.28%);
         background: linear-gradient(35.67deg, rgba(65, 84, 155, 0) 42.18%, #040C1E 196.4%);
         position: absolute;
         z-index: 2;
-        top: 275px;
-        left: 275px;
+        top: 200px;
+        left: 250px;
       }
 
       .stencil {
-        width: 700px;
-        height: 700px;
+        width: 748px;
+        height: 748px;
         position: absolute;
         z-index: 3;
       }
@@ -66,23 +64,23 @@ $Dark: #051129;
       .cover {
         position: absolute;
         z-index: 4;
-        top: 385px;
-        left: 285px;
+        // top: 385px;
+        // left: 285px;
       }
 
       .astro {
-        width: 322px;
-        height: 369px;
+        width: 748px;
+        height: 748px;
         position: absolute;
         z-index: 5;
-        top: 174px;
-        left: 314px;
+        // top: 65px;
+        // left: 138px;
       }
 
       .text-box {
         position: absolute;
-        width: 700px;
-        height: 700px;
+        width: 748px;
+        height: 748px;
         z-index: 6;
 
         p {
@@ -92,7 +90,7 @@ $Dark: #051129;
         }
 
         .top-txt {
-          margin-top: 110px;
+          margin-top: 142px;
           text-align: center;
         }
 

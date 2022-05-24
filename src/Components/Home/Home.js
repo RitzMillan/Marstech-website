@@ -13,7 +13,7 @@ import { Howl } from "howler";
 function Home() {
   const bep = new Howl({
     src: [beep],
-    volume: 0.1,
+    volume: 0.02,
   });
 
   function handlebeep() {
@@ -23,7 +23,7 @@ function Home() {
   return (
     <div>
       <div className="home-grid-container">
-        <ul className="social-nav">
+        <ul className="social-nav hide">
           <li>
             <a
               href="https://www.linkedin.com/company/marstech-ltd/?originalSubdomain=in"
@@ -67,7 +67,6 @@ function Home() {
             >
               <div className="social-sound" onMouseOver={handlebeep}></div>
               <svg
-                onMouseOver={handlebeep}
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
@@ -91,7 +90,6 @@ function Home() {
             >
               <div className="social-sound" onMouseOver={handlebeep}></div>
               <svg
-                onMouseOver={handlebeep}
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
@@ -115,7 +113,6 @@ function Home() {
             >
               <div className="social-sound" onMouseOver={handlebeep}></div>
               <svg
-                onMouseOver={handlebeep}
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
@@ -146,21 +143,21 @@ function Home() {
           </li>
         </ul>
 
-        <div className="rotating-mars-container">
+        <div className="rotating-mars-container hide">
           <img src={hero1} className="hero1" alt="marstech"></img>
-          <div id="mars"></div>
+          <div className="mars"></div>
           <img src={hero2} className="hero2" alt="marstech"></img>
-          <img src={ring0} className="ring0" alt="mars rings"></img>
-          <img src={ring1} className="ring1" alt="mars rings"></img>
-          <img src={ring2} className="ring2" alt="mars rings"></img>
-          <img src={ring3} className="ring3" alt="mars rings"></img>
-          <div className="inst-text">
+          <img src={ring0} className="ring0 hide" alt="mars rings"></img>
+          <img src={ring1} className="ring1 hide" alt="mars rings"></img>
+          <img src={ring2} className="ring2 hide" alt="mars rings"></img>
+          <img src={ring3} className="ring3 hide" alt="mars rings"></img>
+          <div className="inst-text hide">
             <div className="scroll">
               <div className="mouse">
                 <div className="wheel"></div>
               </div>
             </div>
-            <p className="pcolor">
+            <p className="pcolor shine-txt">
               S C R O L L&nbsp;&nbsp;&nbsp;D O W N&nbsp;&nbsp;&nbsp;T
               O&nbsp;&nbsp;&nbsp;S E E&nbsp;&nbsp;&nbsp;W H A
               T&nbsp;&nbsp;&nbsp;W E&nbsp;&nbsp;&nbsp;D O

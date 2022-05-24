@@ -27,7 +27,7 @@ $Dark: #051129;
     z-index: 302;
   }
 
-  #mars {
+  .mars {
     position: fixed;
     z-index: 302;
     width: 300px;
@@ -38,7 +38,7 @@ $Dark: #051129;
     background-position: center;
     background-color: #da2052;
     box-shadow: 
-      inset -10px 0px 10px rgba(218,32,82, 0.3),
+      inset -10px 0px 10px rgba(214,68,57, 0.5),
       inset 60px -20px 40px rgba(2, 16, 31, 1),
       inset 10px -10px 10px rgba(2, 16, 31, 1);
     transform-style: preserve-3d;

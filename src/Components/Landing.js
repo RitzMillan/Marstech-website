@@ -24,7 +24,7 @@ function Landing() {
 
   const bep = new Howl({
       src: [beep],
-      volume: 0.1
+      volume: 0.02
       });
 
   const woh = new Howl({
@@ -39,7 +39,7 @@ function Landing() {
         const window = e.currentTarget;
         const scrollLimit = qty >= 1 && qty <= sectionQty;
         if (scrollLimit) {
-          // body.style.overflowY = "hidden"; // Lock scroll  qty!==3 && qty!==4 && qty!==5
+          // document.body.style.overflowY = "hidden"; // Lock scroll
           
           if (y < window.scrollY && qty < sectionQty) {
             console.log("qty before if",qty)
@@ -74,7 +74,7 @@ function Landing() {
         setTimeout(() => {
           setY(window.scrollY);
           setStartFlag(true);
-          // body.style.overflowY = "scroll"; // Unlock scroll
+          // document.body.style.overflowY = "scroll"; // Unlock scroll
         }, TIME_OUT);
         setStartFlag(false);
       }
@@ -89,6 +89,7 @@ function Landing() {
       window.removeEventListener("scroll", handleNavigation);
     };
   }, [handleNavigation]);
+  
 
   const handleNav= (q) => {
     if(q < subqty){
@@ -123,7 +124,7 @@ function Landing() {
 
   return (
     <div>
-      <ul className="top-nav">
+      <ul className="top-nav hide">
         <li className={subqty===2 ? "current" : ""}><button onClick={() => {handleNav(2); setQty(2)}} onMouseOver={handlebeep} >S E R V I C E S</button></li>
         <li className={subqty===3 ? "current" : ""}><button onClick={() => {handleNav(3); setQty(3)}} onMouseOver={handlebeep}>P R O D U C T S</button></li>
         <li className={subqty===4 ? "current" : ""}><button onClick={() => {handleNav(4); setQty(6)}} onMouseOver={handlebeep}>B U Z Z</button></li>
@@ -134,7 +135,7 @@ function Landing() {
       </ul>
 
 
-      <ul className="page-number">
+      <ul className="page-number hide">
         <li className={subqty===1 ? "acolor" : "pcolor"}>01</li>
         <li className={subqty===2 ? "acolor" : "pcolor"}>02</li>
         <li className={subqty===3 ? "acolor" : "pcolor"}>03</li>
