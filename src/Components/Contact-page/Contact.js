@@ -4,9 +4,22 @@ import "./Contact.scss";
 import stencil from './artwork/stencil_film.svg'
 import cover from './artwork/cover_piece.svg'
 import astro from './artwork/astronaut.png'
+import beep from "../../Assets/sounds/beep.mp3"
+import { Howl } from "howler";
 
 
 function Contact() {
+
+  const bep = new Howl({
+    src: [beep],
+    volume: 0.02
+    });
+
+  function handlebeep() {
+    bep.play()
+  }
+
+
   return (
     <div>
         <div className='contact-grid-container'>
@@ -29,7 +42,7 @@ function Contact() {
                     <input type="text" placeholder="Name"></input>
                     <input type="text" placeholder="Email"></input>
                     <textarea type="text" placeholder="Tell us all about it "></textarea>
-                    <button type="button" className='mbutton'>SEND</button>
+                    <button type="button" className='mbutton' onMouseOver={handlebeep}>SEND</button>
                 </div>
             </div>
         </div>

@@ -90,26 +90,19 @@ function Landing() {
     };
   }, [handleNavigation]);
   
-
   const handleNav= (q) => {
     if(q < subqty){
       console.log(q,"<",qty,"upwards")
       handlewoh();
-      for(let i=subqty; i>q; i--){
-        document.querySelector(`section.s${i-1}`).style.transform = "translateY(0)";
-        document.querySelector(`section.s${i}`).style.transform = "translateY(100vh)";
-      }
-      // setQty(q)
+      document.querySelector(`section.s${q}`).style.transform = "translateY(0)";
+      document.querySelector(`section.s${subqty}`).style.transform = "translateY(100vh)";
       setSubQty(q)
     }
     else if(q > subqty){
       console.log(q,">",qty,"downwards")
       handlewoh();
-      for(let i=subqty; i<q; i++){
-        document.querySelector(`section.s${i}`).style.transform = "translateY(-100vh)";
-        document.querySelector(`section.s${i+1}`).style.transform = "translateY(0)";
-      }
-      // setQty(q)
+      document.querySelector(`section.s${subqty}`).style.transform = "translateY(-100vh)";
+      document.querySelector(`section.s${q}`).style.transform = "translateY(0)";
       setSubQty(q)
     }
   }
@@ -160,8 +153,8 @@ function Landing() {
 
         <section className="s7"><Contact /></section>
 
-        <section ></section>
-        <section ></section>
+        <section></section>   {/* DO NOT REMOVE THIS SECTION */}
+        <section></section>   {/* DO NOT REMOVE THIS SECTION */}
       </div>
     </div>
   );

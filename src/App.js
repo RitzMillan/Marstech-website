@@ -7,16 +7,15 @@ import rotate from "./Assets/icons/rotate.svg";
 import beep from '../src/Assets/sounds/beep.mp3'
 import explosion from '../src/Assets/sounds/explosion.mp3'
 import headphone from '../src/Assets/icons/headphone.svg'
-
-import ReactHowler from "react-howler"; //trying
+import ReactHowler from "react-howler";
 
 function App() {
 
   const [load, setLoad] = useState("loading");
 
-  const [playing, setPlaying] = useState(false); //trying
+  const [playing, setPlaying] = useState(false);
 
-  const playSound = () => {  //trying
+  const playSound = () => {
     setPlaying(!playing);
   };
 
@@ -38,23 +37,23 @@ function App() {
     volume: 0.02
     });
 
-  const amb = new Howl({
-    src: [ambient],
-    html5: true,
-    volume: 0.5,
-    onplay: function () {
-      for (let i = 1; i <= 7; i++) {
-        document.querySelector(`#stroke${i}`).classList.add("stroke");
-        document.querySelector(`#stroke${i}`).classList.remove("nostroke");
-      }
-    },
-    onpause: function () {
-      for (let i = 1; i <= 7; i++) {
-        document.querySelector(`#stroke${i}`).classList.add("nostroke");
-        document.querySelector(`#stroke${i}`).classList.remove("stroke");
-      }
-    },
-  });
+  // const amb = new Howl({
+  //   src: [ambient],
+  //   html5: true,
+  //   volume: 0.5,
+  //   onplay: function () {
+  //     for (let i = 1; i <= 7; i++) {
+  //       document.querySelector(`#stroke${i}`).classList.add("stroke");
+  //       document.querySelector(`#stroke${i}`).classList.remove("nostroke");
+  //     }
+  //   },
+  //   onpause: function () {
+  //     for (let i = 1; i <= 7; i++) {
+  //       document.querySelector(`#stroke${i}`).classList.add("nostroke");
+  //       document.querySelector(`#stroke${i}`).classList.remove("stroke");
+  //     }
+  //   },
+  // });
 
   function handleEnter() {
     document.querySelector('.loading-screen').remove()
@@ -62,6 +61,7 @@ function App() {
       document.querySelector(".rotating-mars-container").classList.add("quick-unhide")
       playSound();
       exx.play();
+      document.body.style.overflow = 'scroll'
     },1000);
     setTimeout(() =>{
       document.querySelector(".top-nav").classList.add("unhide")
@@ -121,10 +121,10 @@ function App() {
   useEffect(() => {
     if(load==="loading" || orientation==="portrait")
     {document.body.style.overflow = 'hidden'}
-    else
-    {
-      document.body.style.overflow = 'scroll'
-    }
+    // else
+    // {
+    //   document.body.style.overflow = 'scroll'
+    // }
   }, [load,orientation])
 
   // For knowing when the app has been loaded on client side
@@ -146,8 +146,10 @@ function App() {
         </div>
         <div className="circle"></div>
         {
-          load==="loaded" && 
+          load==="loaded" ? 
             <button className="enterButton" onClick={handleEnter}>E N T E R</button>
+            :
+            <p className="loading">LOADING</p>
         }
         {
           load==="loaded" && 
@@ -172,23 +174,23 @@ function App() {
         <span id="stroke6"></span>
       </div>
       <ReactHowler 
-      playing={playing} 
-      src={[ambient]} 
-      volume={0.5}
-      loop={true}
-      onPlay={() => {
-        for (let i = 0; i < 7; i++) {
-          document.querySelector(`#stroke${i}`).classList.add("stroke");
-          document.querySelector(`#stroke${i}`).classList.remove("nostroke");
-        }
-      }} 
-      onPause={() => {
-        for (let i = 0; i < 7; i++) {
-          document.querySelector(`#stroke${i}`).classList.add("nostroke");
-          document.querySelector(`#stroke${i}`).classList.remove("stroke");
-        }
-      }}
-      /> {/* trying */}
+        playing={playing} 
+        src={[ambient]} 
+        volume={0.5}
+        loop={true}
+        onPlay={() => {
+          for (let i = 0; i < 7; i++) {
+            document.querySelector(`#stroke${i}`).classList.add("stroke");
+            document.querySelector(`#stroke${i}`).classList.remove("nostroke");
+          }
+        }} 
+        onPause={() => {
+          for (let i = 0; i < 7; i++) {
+            document.querySelector(`#stroke${i}`).classList.add("nostroke");
+            document.querySelector(`#stroke${i}`).classList.remove("stroke");
+          }
+        }}
+      />
     </div>
     
     <div className="device-overlay-container">

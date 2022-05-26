@@ -2,8 +2,15 @@ import React from "react";
 import "../../App.scss";
 import "./Buzz.scss";
 import BlogCard from "./BlogCard";
+import beep from "../../Assets/sounds/beep.mp3"
+import { Howl } from "howler";
 
 function Buzz() {
+
+  const bep = new Howl({
+    src: [beep],
+    volume: 0.02
+    });
 
   const handleLarrow = () => {
     console.log("im left")
@@ -15,6 +22,9 @@ function Buzz() {
     document.querySelector(`.inner-lower`).scrollBy(-300, 0);
   } 
 
+  function handlebeep() {
+    bep.play()
+  }
 
 
   return (
@@ -34,7 +44,7 @@ function Buzz() {
 
       <div className="buzz-grid-container">
         <div className="buzz-controls">
-          <button className="abutton" onClick={handleLarrow}>
+          <button className="abutton" onClick={handleLarrow} onMouseOver={handlebeep}>
             <svg
               style={{ transform: "rotate(180deg)", paddingBottom: "3px" }}
               width="27"
@@ -49,7 +59,7 @@ function Buzz() {
               />
             </svg>
           </button>
-          <button className="abutton" onClick={handleRarrow}>
+          <button className="abutton" onClick={handleRarrow} onMouseOver={handlebeep}>
             <svg
               style={{ paddingTop: "3px" }}
               width="27"

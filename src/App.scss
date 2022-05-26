@@ -271,10 +271,6 @@ body::-webkit-scrollbar {
   background: linear-gradient(129.5deg, #040c1e 78.99%, #040c1e 85.6%);
   z-index: 2;
 }
-.layout .s8 {
-  background: linear-gradient(129.5deg, #011131 19.38%, #040c1c 85.6%);
-  z-index: 1;
-}
 
 /*** RESPONSIVE ***/
 /* MOBILE */
@@ -483,6 +479,13 @@ body::-webkit-scrollbar {
     border: none;
     background: transparent;
     color: $Light;
+    cursor: pointer;
+  }
+
+  .loading {
+    position: absolute;
+    z-index: 3;
+    color: $Light;
   }
 
   .adv-txt {
@@ -659,12 +662,12 @@ body::-webkit-scrollbar {
   position: absolute;
   top: 0;
   z-index: 3000;
-  height: 120vh;
+  height: 130vh;
   width: 100vw;
   // transform: translate(0px, 70vw);
 
   .rotation-overlay {
-    height: 120vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;

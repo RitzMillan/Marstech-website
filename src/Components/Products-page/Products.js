@@ -4,8 +4,15 @@ import "./Products.scss";
 import eth from "../../Assets/images/ethereum.png";
 import reseller from "../../Assets/images/reseller.png";
 import bizz from "../../Assets/images/bizz.png";
+import beep from "../../Assets/sounds/beep.mp3"
+import { Howl } from "howler";
 
 function Products(props) {
+
+  const bep = new Howl({
+    src: [beep],
+    volume: 0.02
+    });
 
   useEffect(() => {
     if(props.qty === 3){
@@ -21,6 +28,10 @@ function Products(props) {
       document.querySelector(`.right-inner-container`).style.transform = `translateY(-${0}00vh)`;
     }
   },[props.qty])
+
+  function handlebeep() {
+    bep.play()
+  }
 
   return (
     <div>
@@ -79,7 +90,7 @@ function Products(props) {
                     Simple to understand and Powerful to use webapp that is
                     equally user frendly in mobile as is in desktop.
                   </p>
-                  <button className="mbutton">KNOW MORE</button>
+                  <button className="mbutton" onMouseOver={handlebeep}>KNOW MORE</button>
                 </div>
                 <div className="left-accent">
                   <h2>Efficient</h2>
@@ -117,7 +128,7 @@ function Products(props) {
                     Clean User interface that has full control of the database
                     and all service features.
                   </p>
-                  <button className="mbutton">KNOW MORE</button>
+                  <button className="mbutton" onMouseOver={handlebeep}>KNOW MORE</button>
                 </div>
                 <div className="right-accent">
                   <h2>Online</h2>
