@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Marstech-website/static/css/main.37462d3e.css",
-    "main.js": "/Marstech-website/static/js/main.c924a571.js",
+    "main.css": "/Marstech-website/static/css/main.a09220ad.css",
+    "main.js": "/Marstech-website/static/js/main.63c9a6af.js",
     "static/js/787.73a4972f.chunk.js": "/Marstech-website/static/js/787.73a4972f.chunk.js",
     "static/media/WinterRestlessness.mp3": "/Marstech-website/static/media/WinterRestlessness.fbb63af1021b867c1ef3.mp3",
     "static/media/wosh2.wav": "/Marstech-website/static/media/wosh2.e59b65d83916c4c66e27.wav",
@@ -36,12 +36,12 @@
     "static/media/cover_piece.svg": "/Marstech-website/static/media/cover_piece.d54e2e1a2718fec4d8978d77a0bd83a1.svg",
     "static/media/ring0.svg": "/Marstech-website/static/media/ring0.e26df20908e32a0ac5ea0af263e26178.svg",
     "static/media/hero2.svg": "/Marstech-website/static/media/hero2.c7bb85693809d0b3a96f8db232883988.svg",
-    "main.37462d3e.css.map": "/Marstech-website/static/css/main.37462d3e.css.map",
-    "main.c924a571.js.map": "/Marstech-website/static/js/main.c924a571.js.map",
+    "main.a09220ad.css.map": "/Marstech-website/static/css/main.a09220ad.css.map",
+    "main.63c9a6af.js.map": "/Marstech-website/static/js/main.63c9a6af.js.map",
     "787.73a4972f.chunk.js.map": "/Marstech-website/static/js/787.73a4972f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37462d3e.css",
-    "static/js/main.c924a571.js"
+    "static/css/main.a09220ad.css",
+    "static/js/main.63c9a6af.js"
   ]
 }
