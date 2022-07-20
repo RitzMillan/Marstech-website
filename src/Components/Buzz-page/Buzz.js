@@ -4,6 +4,7 @@ import "./Buzz.scss";
 import BlogCard from "./BlogCard";
 import beep from "../../Assets/sounds/beep.mp3"
 import { Howl } from "howler";
+import sus from '../../Assets/images/Sustainability.png'
 
 function Buzz() {
 
@@ -44,7 +45,8 @@ function Buzz() {
 
       <div className="buzz-grid-container">
         <div className="buzz-controls">
-          <button className="abutton" onClick={handleLarrow} onMouseOver={handlebeep}>
+          <button className="abutton" onClick={handleLarrow}>
+            <div className="arrow-sound" onMouseOver={handlebeep}></div>
             <svg
               style={{ transform: "rotate(180deg)", paddingBottom: "3px" }}
               width="27"
@@ -80,7 +82,7 @@ function Buzz() {
 
             <BlogCard />
 
-            <a href="https://www.marstech.co.in/images/Programming.svg" target="_blank" rel="noopener noreferrer">
+            <a href="/" target="_blank" rel="noopener noreferrer">
             <div className="blog-card">
               <div className="content">
                 <div>
@@ -89,7 +91,7 @@ function Buzz() {
                   <h4>A Call Towards Sustainability</h4>
                 </div>
                 <img
-                  src="https://www.marstech.co.in/images/Programming.svg"
+                  src={sus}
                   className="thumbnail"
                   alt="blog thumbnail"
                 />
@@ -106,7 +108,7 @@ function Buzz() {
                   <h4>A Call Towards Sustainability</h4>
                 </div>
                 <img
-                  src="https://www.marstech.co.in/images/Programming.svg"
+                  src={sus}
                   className="thumbnail"
                   alt="blog thumbnail"
                 />
@@ -122,7 +124,7 @@ function Buzz() {
                   <h4>A Call Towards Sustainability</h4>
                 </div>
                 <img
-                  src="https://www.marstech.co.in/images/Programming.svg"
+                  src={sus}
                   className="thumbnail"
                   alt="blog thumbnail"
                 />
@@ -138,7 +140,7 @@ function Buzz() {
                   <h4>A Call Towards Sustainability</h4>
                 </div>
                 <img
-                  src="https://www.marstech.co.in/images/Programming.svg"
+                  src={sus}
                   className="thumbnail"
                   alt="blog thumbnail"
                 />

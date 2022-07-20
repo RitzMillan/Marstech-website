@@ -19,8 +19,9 @@ $Dark: #051129;
     align-items: center;
 
     .artwork {
-      height: 748px;
-      width: 748px;
+      height: 50vh;
+      width: 40vw;
+      padding-right: 100px;
 
       .gradient{
         width: 340px;
@@ -58,11 +59,13 @@ $Dark: #051129;
         width: 748px;
         height: 748px;
         position: absolute;
+        top: 0px;
         z-index: 3;
       }
 
       .cover {
         position: absolute;
+        top: 0px;
         z-index: 4;
         // top: 385px;
         // left: 285px;
@@ -72,6 +75,7 @@ $Dark: #051129;
         width: 748px;
         height: 748px;
         position: absolute;
+        top: 0px;
         z-index: 5;
         // top: 65px;
         // left: 138px;
@@ -79,8 +83,8 @@ $Dark: #051129;
 
       .text-box {
         position: absolute;
-        width: 748px;
-        height: 748px;
+        height: 50vh;
+        width: 50vw;
         z-index: 6;
 
         p {
@@ -90,7 +94,7 @@ $Dark: #051129;
         }
 
         .top-txt {
-          margin-top: 142px;
+          // margin-top: 142px;
           text-align: center;
         }
 

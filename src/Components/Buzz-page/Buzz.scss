@@ -193,7 +193,7 @@ $Dark: #051129;
     }
 
     .thumbnail {
-      height: 65%;
+      // height: 65%;
       width: 65%;
       margin-bottom: -30px;
     }
@@ -207,4 +207,13 @@ $Dark: #051129;
 a, a:visited, a:hover, a:active{
   color: inherit;
   text-decoration: none;
+}
+
+.arrow-sound {
+  position: fixed;
+  // position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
 }
